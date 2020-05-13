@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>W02:task3</title>
+  </head>
+  <body>
+    <form name="number">1点目の座標を指定してください:
+      x: <input type="number" name="vartex1_x" value="0">
+      y: <input type="number" name="vartex1_y" value="0">
+      z: <input type="number" name="vartex1_z" value="0">
+      <br>
+      
+      2点目の座標を指定してください:
+      x: <input type="number" name="vartex2_x" value="4">
+      y: <input type="number" name="vartex2_y" value="0">
+      z: <input type="number" name="vartex2_z" value="0">
+      <br>
+      
+      3点目の座標を指定してください:
+      x: <input type="number" name="vartex3_x" value="2">
+      y: <input type="number" name="vartex3_y" value="4">
+      z: <input type="number" name="vartex3_z" value="0">
+      <br>
+    </form>
+
+    <input type="button" value="Calculate the area" id="click_me"/>
+    <p id="target1"></p>
+    <p id="target2"></p>
+    <p id="target3"></p>
+    <p id="target4"></p>
+    <p id="target5"></p>
+    <p id="target6"></p>
+    
+    <script src="vec3.js"></script>
+    <script>
+      var element = document.getElementById("click_me");
+      element.addEventListener("click",e);
+      function e()
+      {
+      
+      var x0 = document.number.vartex1_x.value;
+      var y0 = document.number.vartex1_y.value;
+      var z0 = document.number.vartex1_z.value;
+
+      var x1 = document.number.vartex2_x.value;
+      var y1 = document.number.vartex2_y.value;
+      var z1 = document.number.vartex2_z.value;
+
+      var x2 = document.number.vartex3_x.value;
+      var y2 = document.number.vartex3_y.value;
+      var z2 = document.number.vartex3_z.value;
+          
+      var v0 = new Vec3(x0,y0,z0);
+      var v1 = new Vec3(x1,y1,z1);
+      var v2 = new Vec3(x2,y2,z2);
+     
+      document.getElementById("target1").innerHTML = "vecter0(" + x0 + "," + y0 + "," + z0 + ")" + "<br>";
+      
+      document.getElementById("target2").innerHTML = "vecter1(" + x1 + "," + y1 + "," + z1 + ")" + "<br>";
+      
+      document.getElementById("target3").innerHTML = "vecter1(" + x2 + "," + y2 + "," + z2 + ")" + "<br>";      
+
+      document.getElementById("target6").innerHTML = "The area of triangle=" + AreaOfTriangle(v0, v1, v2);
+      
+      }
+        
+    </script>
+  </body>
+</html>
