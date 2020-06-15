@@ -96,12 +96,12 @@ function TransferFunctionTexture()
     var cmap = [];
     for ( var i = 0; i < resolution; i++ )
     {
-        //var color = KVS.RainbowColorMap( i, 255, 0 );
+        var color = KVS.RainbowColorMap( 0, 255, i );
         var S = i / 255;
 	var R = 1.0;//Math.max( Math.cos( ( S - 1.0 )*Math.PI ), 0.0 );
 	var G = 1.0 - S;//Math.max( Math.cos( ( S - 0.5 )*Math.PI ), 0.0 );
 	var B = 1.0 - S;//Math.max( Math.cos( ( S )*Math.PI ), 0.0 );
-	var color = new THREE.Color( R, G, B );
+	//var color = new THREE.Color( R, G, B );
         data[ 4 * i + 0 ] = color.x;
         data[ 4 * i + 1 ] = color.y;
         data[ 4 * i + 2 ] = color.z;
