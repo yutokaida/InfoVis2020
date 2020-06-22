@@ -27,7 +27,7 @@ program conv
      if(g.eq.0.0) then
         print*, "OK5"
         num = f
-        write(11,*) a, ',', num
+        write(11,'(i4,a1,i3)') a, ',', num
      end if
   end do
   print*, "complete"
