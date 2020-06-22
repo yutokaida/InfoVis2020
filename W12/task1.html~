@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- load d3.js -->
+<script src="https://d3js.org/d3.v5.min.js"></script>
+
+<!-- Create s div where the graph will take place -->
+<div id="my_dataviz"></div>

@@ -1,0 +1,24 @@
+program conv
+  implicit none
+
+  integer, parameter :: SP = kind(1.0)
+  integer, parameter :: DP = selected_real_kind(2*precision(1.0_SP))
+
+  integer :: i,j,k
+  real(DP) :: a,b,c,d
+  character(len=20) :: f_name, value
+  
+
+  open(10,file='data.csv')
+  open(11,file='data1.csv', status='replace')
+  do i=1,200
+     read(10,'(a4,i2,i2,i2)') a, b, c, d
+     print*, "OK4"
+     print*,"c=",c
+     if(c.eq.0.0) then
+        print*, "OK5"
+        write(11,*) a, ',', b
+     end if
+  end do
+  print*, "complete"
+end program conv
