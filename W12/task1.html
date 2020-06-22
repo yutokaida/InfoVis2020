@@ -30,14 +30,14 @@ var svg = d3.select("#my_dataviz")
 
 //Read the data
 //d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/2_TwoNum.csv", function(data) {
-d3.csv("https://yutokaida.github.io/InfoVis2020/W12/data1.csv", function(data) {
+d3.csv("https://yutokaida.github.io/InfoVis2020/W12/data2.csv", function(data) {
 
 
 
   // Add X axis
   var x = d3.scaleLinear()
-    .domain([2008, 2020])
-    //.domain([0, 4000])
+    //.domain([2008, 2020])
+    .domain([0, 4000])
     .range([ 0, width ]);
   svg.append("g")
     .attr("transform", "translate(0," + height + ")")
@@ -45,8 +45,8 @@ d3.csv("https://yutokaida.github.io/InfoVis2020/W12/data1.csv", function(data) {
 
   // Add Y axis
   var y = d3.scaleLinear()
-    .domain([0, 150])
-    //.domain([0, 500000])
+    //.domain([0, 150])
+    .domain([0, 500000])
     .range([ height, 0]);
   svg.append("g")
     .call(d3.axisLeft(y));
