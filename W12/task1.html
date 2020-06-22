@@ -37,7 +37,7 @@ d3.csv("https://yutokaida.github.io/InfoVis2020/W12/data1.csv", function(data) {
 
   // Add X axis
   var x = d3.scaleLinear()
-    .domain([0, 2020])
+    .domain([2008, 2020])
     //.domain([0, 4000])
     .range([ 0, width ]);
   svg.append("g")
